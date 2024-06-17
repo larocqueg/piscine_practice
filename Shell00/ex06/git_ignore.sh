@@ -1,3 +1,3 @@
 #!/bin/sh
-git ls-files -io --exclude-standard
+git ls-files --ignored --others  --exclude-standard
 echo
