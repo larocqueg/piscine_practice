@@ -1,2 +1,3 @@
 #!/bin/sh
-git ls-files -io
+git ls-files -io --exclude-standart
+echo
