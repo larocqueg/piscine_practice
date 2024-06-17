@@ -1,2 +1,2 @@
-git ls-files -io --exclude-standard
-
+#!/bin/sh
+git ls-files -io
