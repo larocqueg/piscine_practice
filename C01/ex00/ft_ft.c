@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 16:26:27 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/19 15:56:58 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/06/19 15:50:50 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/06/19 15:51:19 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb2(void)
+void	ft_ft(int *nbr)
 {
-	char	a;
-	char	b;
-	char	c;
-	char	d;
-
-	a = '0';
-	b = '0';
-	while (a <= '9')
-	{
-		while (b <= '9')
-		{
-			write(1, &a, 1);
-			write(1, &b, 1);
-			write(1, " ", 1);
-			b++;
-		}
-	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
+	*nbr = 42;
 }

@@ -1,0 +1,39 @@
+To start using 'write' function, you must declare its library on top of your program;
+It's library is 'unistd' so, you must declare it like so: #include <unistd.h>'
+
+Write function takes 3 parameters to run, (parameter 1, parameter 2, parameter 3);
+
+parameter 1:	Using 0 as parameter 1 makes write use standard input (stdin);
+
+		Using 1 as parameter 1 makes weite use standard output (stdout);
+
+		Using 2 as parameter 1 makes write use standard error (stderr);
+
+
+stdin(0):	Typcally used for reading inputs from terminal;
+
+
+stdout(1):	Typically used for writing outputs on terminal;
+
+
+srderr(2):	Typically used to output error message and diagnostic:
+
+
+
+
+
+parameter 2:	This parameter is where i'm going to put the pointer to the buffer data you want to write, this parameter should point to the memory location 
+		that holds the data to be outputted. To correctly point to a memory location you must use '&' and the variable name you are storing the data
+		to be written, exemple:
+		
+		int main(void)
+		{
+			char *text_to_be_written = "teste";
+
+			write(1, &text_to_be_writeen, 1);
+		}
+		Note: To be easy use only char * variables, if you use int type variables you will have to convert them to char *;
+
+
+parameter 3:	This parameter is where you put the numbers of bytes to be written, every caracter counts as 1 byte, spaces and '\n' counts as 1 byte too;
+		

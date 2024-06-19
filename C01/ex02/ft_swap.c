@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 16:26:27 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/19 15:56:58 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/06/19 16:05:37 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/06/19 16:07:51 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb2(void)
+void	ft_swap(int *a, int *b)
 {
-	char	a;
-	char	b;
-	char	c;
-	char	d;
+	int	temp;
 
-	a = '0';
-	b = '0';
-	while (a <= '9')
-	{
-		while (b <= '9')
-		{
-			write(1, &a, 1);
-			write(1, &b, 1);
-			write(1, " ", 1);
-			b++;
-		}
-	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
