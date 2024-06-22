@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:26:27 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/19 15:56:58 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/06/22 14:21:52 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,33 @@
 
 void	ft_print_comb2(void)
 {
-	char	a;
-	char	b;
-	char	c;
-	char	d;
+	int	i;
+	int	j;
+	char	a[5];
 
-	a = '0';
-	b = '0';
-	while (a <= '9')
+	i = 0;
+	while(i <= 98)
 	{
-		while (b <= '9')
+		j = i + 1;
+		while(j <= 99)
 		{
-			write(1, &a, 1);
-			write(1, &b, 1);
-			write(1, " ", 1);
-			b++;
+			a[0] = '0' + (i / 10);
+			a[1] = '0' + (i % 10);
+			a[2] = ' ';
+			a[3] = '0' + (j / 10);
+			a[4] = '0' + (j % 10);
+			write(1, &a, 5);
+			if(i != 98 || j != 99)
+				write(1, ", ", 2);
+			j++;
 		}
+		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_comb2();
+	return 0;
 }
+*/
