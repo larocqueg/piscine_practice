@@ -14,6 +14,7 @@ int	main(int argc, char *argv[])
 	printf("Fibonacci:\n");
 	while(i <= num)
 	{
+		// Using printf like this will output every step of fibonacci
 		printf("%i --> %i\n", i, fibonacci(i));
 		i++;
 	}
