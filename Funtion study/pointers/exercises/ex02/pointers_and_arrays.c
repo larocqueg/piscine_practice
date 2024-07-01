@@ -2,6 +2,13 @@
 
 void reverseArray(int *arr, int size) 
 {
+	// Check for non-positive value of size;
+	if (size <= 0)
+	{
+		printf("Invalid array size!\n");
+		return;
+	}
+
 	// Pointer to the arr start
 	int *start = arr;
 
