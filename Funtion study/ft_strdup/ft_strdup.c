@@ -17,18 +17,34 @@ char    *ft_strdup(char *src);
 char	*ft_strdup(char *src)
 {
 	int i = 0;
-	while(src[i] != '\0')
-		i++;
-	
-	char *mod = malloc(i *(sizeof(char)));
 
-	i = 0;	
-	while(src[i] != '\0')
+	// Checks if src is NULL
+	if (src == NULL)
+		return(NULL);
+
+	// Calculates str length
+	while (src[i] != '\0')
+		i++;
+
+	// Allocate memory for the dup string
+	char *dup = malloc((i + 1) * sizeof(char));
+	
+
+	// Check if memory allocation was successful
+	if (dup == NULL)
+		return(NULL);
+
+	i = 0;
+	// Copy the src to the dup string
+	while (src[i] != '\0')
 	{
-		mod[i] = src[i];
-		i++; 
+		dup[i] = src[i];
+		i++;
 	}
-	return(mod);
+	// Puts a Null-terminator in dup string
+	dup[i] = '\0';
+	
+	return(dup);
 }
 
 int	main(void)
@@ -39,7 +55,14 @@ int	main(void)
 	// Prints the original str
 	printf("Source str is: %s\n", source);
 
-	// Prints the modified str
+	// Cheks if memory allocation was successful
+	if(new == NULL)
+	{
+		printf("Memory allocation failed\n");
+		return(1);
+	}
+
+	// Prints the Duplicated str
 	printf("Modified str: %s\n", new);
 
 	// Frees memory back to the system
