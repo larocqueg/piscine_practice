@@ -1,5 +1,4 @@
 /* ************************************************************************** */
-
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
@@ -7,21 +6,22 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:30:00 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/02 19:17:45 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/03 16:40:09 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 //#include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	char *s = str;
-	char *tf = to_find;
+	char	*s;
+	char	*tf;
 
-	while(*str)
+	while (*str)
 	{
 		s = str;
 		tf = to_find;
-		while(*s && *tf && (*s == *tf))
+		while (*s && *tf && (*s == *tf))
 		{
 			s++;
 			tf++;
