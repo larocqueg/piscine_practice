@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 16:51:23 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/03 17:31:12 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/04 16:01:12 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int main(void)
 {
 	char dest[20] = "Hello";
 	char *src = " World";
-	size_t dstsize = sizeof(dest);
+	unsigned int  dstsize = sizeof(dest);
 
-	size_t result = ft_strlcat(dest, src, dstsize);
+	unsigned int result = ft_strlcat(dest, src, dstsize);
 
 	printf("Resulting string: '%s'\n", dest);
-	printf("Total length: %zu\n", result);
+	printf("Total length: %i\n", result);
 
 	return 0;
 }
