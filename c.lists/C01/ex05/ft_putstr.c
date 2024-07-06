@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
+/*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 20:47:23 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/19 21:32:21 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/04 20:10:42 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,12 @@ void	ft_putstr(char *str)
 		length++;
 	write(1, str, length);
 }
-/*
-int	main(void)
+
+int	main(int argc, char *argv[])
 {
 	char *message;
 
-	message = "Hello, World!\n";
+	message = argv[1];
 	ft_putstr(message);
 	return 0;
 }
-*/
-
