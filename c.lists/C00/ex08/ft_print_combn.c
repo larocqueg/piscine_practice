@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 // Function used to print
 void	ft_putchar(char c)
@@ -59,9 +59,10 @@ void	ft_print_combn(int n)
 				ft_putchar(' ');
 			}
 		}
-
+/*
 int	main(void)
 {
 	ft_print_combn(2);
 	return(0);
 }
+*/
