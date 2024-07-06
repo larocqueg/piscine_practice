@@ -30,8 +30,7 @@ void    ft_putnbr(int nb)
         }
 	// Will divide nbr by 10 so it becomes < 10 to be written on terminal
         if (n >= 10)
-		// Using recursion it will reecall the ft_putnbr function untill n < 10
-                ft_putnbr(n / 10);
+        	ft_putnbr(n / 10);
         ft_putchar((n % 10) + '0');
 	return;
 }
@@ -42,5 +41,3 @@ int     main(void)
 	write(1, "\n", 1);
 }
 */
-
-

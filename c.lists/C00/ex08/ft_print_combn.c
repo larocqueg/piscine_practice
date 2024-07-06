@@ -53,7 +53,7 @@ void	ft_print_combn(int n)
 			if(b[0] == 10 - n)
 				break;
 		// If n = 2 or more it will print a comma and a empty space
-			if(n > 1);
+			if(n > 1)
 			{
 				ft_putchar(',');
 				ft_putchar(' ');
