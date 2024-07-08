@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
+/*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 12:46:51 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/08 14:13:37 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/08 17:18:15 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,14 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 /*
-int	main(int argc, char *argv[])
+int	main(void)
 {
-	char	*nbr = argv[1];
+	char	*nbr;
 
-	if(argc == 2)
-	{
-		printf("Result is: %i\n", ft_atoi(nbr));
-	}
-	else
-		printf("Missing command line argument!\n");
+	nbr = "--+--+-1234a56";
+	printf("Result is: %i\n", ft_atoi(nbr));
+	//else
+		//printf("Missing command line argument!\n");
 	return (0);
 }
 */
