@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 18:36:18 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/24 19:01:32 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/08 17:56:21 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void	ft_print_combn(int n)
 				ft_putchar(' ');
 			}
 		}
+	}
+}
 /*
 int	main(void)
 {

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
+/*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 20:47:23 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/08 17:58:39 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/07/08 18:00:08 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/07/08 18:01:26 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	length;
 
-	length = 0;
-	while (str [length] != '\0')
-		length++;
-	write(1, str, length);
 }
-/*
-int	main(int argc, char *argv[])
+
+int	main(void)
 {
-	char *message;
 
-	message = argv[1];
-	ft_putstr(message);
-	return 0;
 }
-*/
