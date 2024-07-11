@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/11 21:34:53 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/11 22:33:18 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/07/11 22:22:44 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/07/11 22:28:32 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_sqrt(int nb)
+int ft_is_prime(int nb)
 {
-	int	x;
-
-	x = 0;
-	if (nb < 0)
-		return (0);
-	while (x * x <= nb)
-	{
-		if (x * x == nb)
-			return (x);
-		x++;
-	}
-	return (0);
+	// For nb be prime it can only be divided by 1 and it self
+	// if (nb / 1 == natural value && nb / nb == natural value)
+	
 }
-/*
+
 int	main(int ac, char *av[])
 {
-	int n = atoi(av[1]);
 
-	int nsqrt = ft_sqrt(n);
-	printf("squereroot of %i is: %i\n", n, nsqrt);	
 }
-*/
