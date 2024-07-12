@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/11 22:22:44 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/12 19:13:16 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/07/12 19:15:39 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/07/12 19:34:20 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
 
@@ -28,17 +28,30 @@ int ft_is_prime(int nb)
 	}
 	return (1);
 }
+
+int	ft_find_next_prime(int nb)
+{
+	if (nb <= 2)
+		return (2);
+	while (nb)
+	{
+		if (ft_is_prime(nb) == 1)
+			break ;
+		nb++;
+	}
+	return (nb);
+}
 /*
 int	main(int ac, char *av[])
 {
 	int n = atoi(av[1]);
 
-	int nprime = ft_is_prime(n);
+	int nprime = ft_find_next_prime(n);
 
-	if (nprime == 1)
-		printf("%i is prime!\n", n);
+	if (n == nprime)
+		printf("%i already is a prime number!\n", n);
 	else
-		printf("%i is not prime!\n", n);
+		printf("The next prime is: %i\n", nprime);
 	return (0);
 }
 */
