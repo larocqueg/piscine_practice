@@ -5,59 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/14 18:33:41 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/14 19:58:03 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/07/19 15:04:35 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/07/19 21:56:08 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	rush00(int cl, int rw)
+void	conditions(int i, int j, int x, int y)
 {
-	int		i;
-	int		j;
 	int		rwlast;
 	int		cllast;
 
-	i = 0;
-	rwlast = rw - 1;
-	cllast = cl - 1;
-	while (i < rw)
+	cllast = x - 1;
+	rwlast = y - 1;
+	if (i == 0 || i == rwlast)
 	{
-		j = 0;
-		while (j < cl)
-		{
-			if (i == 0 || i == rwlast)
-			{
-				if (j == 0 || j == cllast)
-					write(1, "o", 1);
-				else 
-					write(1, "-", 1);
-			}
-			else
-			{
-				if (j == 0 || j == cllast)
-					write(1, "|", 1);
-				else
-					write(1, " ", 1);
-			}
-			j++;
-		}
-		write(1, "\n", 1);
-		i++;
+		if (j == 0)
+			ft_putchar('o');
+		if (j == cllast && j != 0)
+			ft_putchar('o');
+		else if (j != 0 && j != cllast)
+			ft_putchar('-');
+	}
+	else
+	{
+		if (j == 0 || j == cllast)
+			ft_putchar('|');
+		else
+			ft_putchar(' ');
 	}
 }
 
-int		main(void)
+void	rush(int x, int y)
 {
-	rush00(5,3);
-	write(1, "\n", 1);
-	rush00(5,1);
-	write(1, "\n", 1);
-	rush00(1,1);
-	write(1, "\n", 1);
-	rush00(1, 5);
-	write(1, "\n", 1);
-	rush00(4,4);
-	return (0);
+	int		i;
+	int		j;
+
+	i = 0;
+	while (i < y)
+	{
+		j = 0;
+		while (j < x)
+		{
+			conditions(i, j, x, y);
+			j++;
+		}
+		ft_putchar('\n');
+		i++;
+	}
 }
