@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:04:35 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/19 21:56:08 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/20 15:45:49 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@ void	ft_putchar(char c);
 
 void	conditions(int i, int j, int x, int y)
 {
-	int		rwlast;
-	int		cllast;
-
-	cllast = x - 1;
-	rwlast = y - 1;
-	if (i == 0 || i == rwlast)
+	if (i == 1 || i == y)
 	{
-		if (j == 0)
+		if (j == 1 || j == x)
 			ft_putchar('o');
-		if (j == cllast && j != 0)
-			ft_putchar('o');
-		else if (j != 0 && j != cllast)
+		else
 			ft_putchar('-');
 	}
 	else
 	{
-		if (j == 0 || j == cllast)
+		if (j == 1 || j == x)
 			ft_putchar('|');
 		else
 			ft_putchar(' ');
@@ -42,11 +35,11 @@ void	rush(int x, int y)
 	int		i;
 	int		j;
 
-	i = 0;
-	while (i < y)
+	i = 1;
+	while (i <= y)
 	{
-		j = 0;
-		while (j < x)
+		j = 1;
+		while (j <= x)
 		{
 			conditions(i, j, x, y);
 			j++;

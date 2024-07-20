@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush02.c                                           :+:      :+:    :+:   */
+/*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/20 16:17:29 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/20 16:18:01 by larocqueg        ###   ########.fr       */
+/*   Created: 2024/07/20 16:20:11 by larocqueg         #+#    #+#             */
+/*   Updated: 2024/07/20 16:23:17 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	first_row(int j, int x)
 	if (j == 1)
 		ft_putchar('A');
 	if (j == x && j != 1)
-		ft_putchar('A');
+		ft_putchar('C');
 	else if (j > 1 && j < x)
 		ft_putchar('B');
 }
@@ -35,7 +35,7 @@ void	middle_rows(int j, int x)
 void	last_row(int j, int x)
 {
 	if (j == 1)
-		ft_putchar('C');
+		ft_putchar('A');
 	if (j == x && j != 1)
 		ft_putchar('C');
 	else if (j != 1 && j != x)

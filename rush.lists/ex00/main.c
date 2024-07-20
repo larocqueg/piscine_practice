@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:19:54 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/19 22:31:24 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/20 16:31:48 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void	rush(int x, int y);
 
 int	main(void)
 {
-	rush(4, 4);	
+	rush(5, 5);
 	return (0);
 }
