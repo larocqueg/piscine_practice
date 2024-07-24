@@ -6,12 +6,13 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 13:34:16 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/24 15:07:48 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/24 17:14:37 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+// Function to print a string of characters
 void	ft_putstr(char *c)
 {
 	while (*c)
@@ -21,6 +22,7 @@ void	ft_putstr(char *c)
 	}
 }
 
+// Function to swap 2 strings
 void	ft_swap(char **a, char **b)
 {
 	char	*temp;
@@ -30,6 +32,7 @@ void	ft_swap(char **a, char **b)
 	*b = temp;
 }
 
+// Function to compara 2 strings character by character
 int	ft_strcmp(char *a, char *b)
 {
 	while (*a == *b)
@@ -37,10 +40,11 @@ int	ft_strcmp(char *a, char *b)
 		a++;
 		b++;
 	}
-	return (*(unsigned char *)a - *(unsigned char *)b);
+	return (*a - *b);
 }
 
-void	ft_sort(int ac, char *av[])
+// Function to see if the strings are in correct ascii order
+void	ft_sort_condition(int ac, char *av[])
 {
 	int	i;
 	int	j;
@@ -65,7 +69,7 @@ int	main(int ac, char *av[])
 
 	if (ac > 1)
 	{
-		ft_sort(ac, av);
+		ft_sort_condition(ac, av);
 		i = 1;
 		while (i < ac)
 		{
