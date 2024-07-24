@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 13:34:16 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/24 17:14:37 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/24 17:26:33 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_swap(char **a, char **b)
 	*b = temp;
 }
 
-// Function to compara 2 strings character by character
+// Function to compare 2 strings character by character
 int	ft_strcmp(char *a, char *b)
 {
 	while (*a == *b)
