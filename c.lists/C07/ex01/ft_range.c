@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:10:22 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/29 18:25:14 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/07/29 20:30:09 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	*ft_range(int min, int max)
 {
 	int	i;
-	int n;
+	int	n;
 	int	size;
 	int	*dest;
 
@@ -27,12 +27,12 @@ int	*ft_range(int min, int max)
 	i = 0;
 	n = min;
 	if (!dest)
-		return(NULL);
-	while(n < max)
+		return (NULL);
+	while (n < max)
 	{
 		dest[i] = n;
 		n += 1;
-		i++; 
+		i++;
 	}
 	return (dest);
 }
