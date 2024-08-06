@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 20:35:04 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/08/05 21:00:26 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/08/06 19:03:00 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,29 +23,44 @@ int	ft_strlen(char *str)
 	return (length);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+int	ft_total_len(int size, char **strs, char *sep)
 {
+	int	len;
 	int	i;
-	int	j;
-	int	k;
-	int	l;
-	char	*result;
 
 	if (size == 0)
-	{
-		result = (char *)malloc(1);
-		result[0] = '\0';
-		return (result);
-	}
+		return (0);
 	i = 0;
-	j = 0;
+	len = 0;
 	while (i < size)
+		len += ft_strlen(strs[i++]);
+	len += ft_strlen(sep) * (size - 1);
+	return (len);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
 	{
-		j += ft_strlen(strs[i]);
+		dest[i] = src[i];
 		i++;
 	}
-	j += ft_strlen(sep) * (size - 1);
-	result = (char *)malloc(j + 1);
+	dest[i] = '\0';
+	return (dest);
+}
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	int		i;
+	int		j;
+	int		k;
+	int		l;
+	char	*result;
+
+	result = (char *)malloc((ft_total_len(size, strs, sep)) + 1);
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -54,21 +69,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	{
 		j = 0;
 		while (strs[i][j])
-		{
-			result[k] = strs[i][j];
-			j++;
-			k++;
-		}
-		if (strs[i][j] == '\0' && i != size - 1)
-		{
-			l = 0;
-			while (sep[l])
-			{
-				result[k] = sep[l];
-				k++;
-				l++;
-			}
-		}
+			result[k++] = strs[i][j++];
+		l = 0;
+		while (sep[l] && i != size - 1)
+			result[k++] = sep[l++];
 		i++;
 	}
 	result[k] = '\0';

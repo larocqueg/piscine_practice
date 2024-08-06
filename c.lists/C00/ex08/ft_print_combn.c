@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
+/*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 18:36:18 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/07/08 17:56:21 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/08/06 20:05:27 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
+#include <stdio.h>
 
 // Function used to print
 void	ft_putchar(char c)
@@ -61,10 +61,9 @@ void	ft_print_combn(int n)
 		}
 	}
 }
-/*
+
 int	main(void)
 {
 	ft_print_combn(2);
 	return(0);
 }
-*/
