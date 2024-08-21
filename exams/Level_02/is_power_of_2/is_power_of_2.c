@@ -13,16 +13,10 @@ int	    is_power_of_2(unsigned int n)
 
 int main(int ac, char *av[])
 {
-    if (ac < 2) {
-        printf("Please, provide an integer!.\n");
-        return 1;
-    }
-
     unsigned int x = atoi(av[1]);
     if (is_power_of_2(x) == 1)
         printf("%d is power of 2!\n", x);
     else 
         printf("%d is not power of 2!\n", x);
-    
     return 0;
 }
