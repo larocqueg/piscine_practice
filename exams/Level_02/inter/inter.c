@@ -20,7 +20,7 @@ int	main(int ac, char *av[])
 		int		j;
 		char	*a;
 		char	*b;
-		char	result[256];
+		char	result[256] = {0};
 
 		i = 0;
 		j = 0;
