@@ -1,21 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int	    is_power_of_2(unsigned int n)
 {
 	if (n == 0)
 		return (0);
-	return (n && (n & n - 1) == 0);
+    else if ((n & (n - 1)) == 0)
+        return (1);
+    return (0);
 	
 }
 
-int main() {
-    unsigned int test_numbers[] = {1, 2, 3, 4, 8, 16, 18, 32, 64, 100};
-    int size = sizeof(test_numbers) / sizeof(test_numbers[0]);
-
-    for (int i = 0; i < size; i++) {
-        printf("%u is %s\n", test_numbers[i], is_power_of_2(test_numbers[i]) ? "a power of 2" : "not a power of 2");
+int main(int ac, char *av[])
+{
+    if (ac < 2) {
+        printf("Please, provide an integer!.\n");
+        return 1;
     }
 
+    unsigned int x = atoi(av[1]);
+    if (is_power_of_2(x) == 1)
+        printf("%d is power of 2!\n", x);
+    else 
+        printf("%d is not power of 2!\n", x);
+    
     return 0;
 }
-
