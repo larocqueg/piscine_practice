@@ -6,17 +6,17 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:01:56 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/06/19 16:04:51 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/09/08 14:53:32 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
-/*
+
 int main(void)
 {
 	int original = 0;
@@ -32,4 +32,4 @@ int main(void)
 	
 	printf("%d\n", original);
 }
-*/
+

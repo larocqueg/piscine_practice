@@ -6,7 +6,7 @@
 /*   By: larocqueg <larocqueg@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 16:04:03 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/08/06 20:04:51 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/09/07 19:19:46 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ void    ft_putnbr(int nb)
         ft_putchar((n % 10) + '0');
 	return;
 }
-/*
+
 int     main(void)
 {
 	ft_putnbr(-2147483648);
 	write(1, "\n", 1);
 }
-*/
+
